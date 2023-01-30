@@ -26,12 +26,15 @@
                     <p><strong>Request from: </strong><%= booking.user.first_name %> <%=booking.user.last_name%></p>
                     <p><strong>Offer Ref: </strong><%= booking.coaching_offer.title %></p>
                     <p><strong>Skill: </strong><%= booking.coaching_offer.skill %></p>
-                    <%= link_to ":email:", booking.coaching_offer.user.email, class: "btn-ghost a-btn ms-2" %>
+                    <%= link_to "Contact the coach", "#{booking.coaching_offer.user.email}", class: "btn-ghost a-btn ms-2" %>
                     <div class="flex-grow-1 text-end">
                        <% if booking.status == "accepted" %>
-                        <h5>🎉 Booking Confirmed</h5>
+                        <h5 class=booking-status>🎉 Booking Confirmed</h5>
+                        <%= link_to "Reject Request", status_path(booking.id, status: "rejected"), data: {turbo_method: :patch}, class: "btn-ghost a-btn ms-2" %>
                       <% elsif booking.status == "rejected" %>
-                        <h5>😢 Booking Rejected</h5>
+                        <h5 class=booking-status>😢 Booking Rejected</h5>
+                        <%= link_to "Accept Request", status_path(booking.id, status: "accepted"), data: {turbo_method: :patch}, class: "btn-flat a-btn ms-2" %>
+                        <%= link_to "Delete Request", booking_path(booking), data: { turbo_method: :delete}, class: "btn-ghost a-btn ms-2" %>
                       <% else %>
                         <%= link_to "Reject Request", status_path(booking.id, status: "rejected"), data: {turbo_method: :patch}, class: "btn-ghost a-btn ms-2" %>
                         <%= link_to "Accept Request", status_path(booking.id, status: "accepted"), data: {turbo_method: :patch}, class: "btn-flat a-btn ms-2" %>
