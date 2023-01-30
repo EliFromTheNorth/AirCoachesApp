@@ -1,0 +1,23 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1528901166007-3784c7dd3653?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3270&q=80);">
+  <div class="container">
+    <h1><span data-controller="typed-js"></span></h1>
+    <p>Get help, learn faster and finish your projects today!</p>
+    <% if user_signed_in? %>
+      <%= link_to "Get started", dashboard_path, class: "btn btn-flat" %>
+    <% else %>
+      <%= link_to "Get started", new_user_registration_path, class: "btn btn-flat" %>
+    <% end %>
+  </div>
+</div>
+
+<div class="container">
+  <div class="my-5">
+    <h2> Top rated offers from our coaches:</h2>
+  </div>
+
+  <div class="grid">
+    <% @coaching_offers.each do |offer| %>
+      <%= render "shared/offer_card", offer: offer %>
+    <% end %>
+  </div>
+</div>

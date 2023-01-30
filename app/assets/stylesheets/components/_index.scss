@@ -1,0 +1,26 @@
+// Import your components CSS files here.
+@import "alert";
+@import "avatar";
+@import "form_legend_clear";
+@import "navbar";
+@import "buttons";
+@import "form";
+@import "cards";
+@import "footer";
+// ********************* show page ***********************
+
+.show-content {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px auto;
+}
+
+.offers-heading {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.other-offers {
+  margin-bottom: 30px;
+}
+

@@ -43,14 +43,18 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
 
 # Use Sass to process CSS
-# gem "sassc-rails"
+gem "sassc-rails"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
+gem "cloudinary"
+
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem "dotenv-rails"
+
 end
 
 group :development do
@@ -70,3 +74,19 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+# Used for creating the user authentication
+gem "devise"
+
+# Used for Seeding the DB
+gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'main'
+
+# Used for style related stuff
+gem "autoprefixer-rails"
+gem "font-awesome-sass", "~> 6.1"
+
+# Used for creating nice forms with ease
+gem "simple_form", github: "heartcombo/simple_form"
+
+# Used for creating search forms
+gem "pg_search"

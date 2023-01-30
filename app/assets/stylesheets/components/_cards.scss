@@ -1,0 +1,238 @@
+// ******************* Card offer ************************
+
+.offer_card {
+  background-color: $white;
+  width: -webkit-fill-available;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  border: 3px solid $pri-salmon;
+  margin-right: 20px;
+}
+
+.img_info {
+  padding: 15px;
+  height: 150px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.infos {
+  width: 400px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.full-name {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: $h3-font;
+  color: $sec-teal;
+}
+
+.skills {
+  font-family: $headers-font;
+  color: $sec-teal;
+  font-weight: bold;
+}
+
+.rating_price {
+  display: flex;
+  justify-content: space-between;
+  color: $sec-teal;
+  font-weight: bold;
+}
+
+.offer_description {
+  height: 200px;
+  padding: 20px 40px 20px 40px;
+  border-top: 1px solid $pri-salmon;
+}
+
+.profile-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+  }
+}
+
+.profile-image > img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.offer_description:first-line {
+  font-family: $headers-font;
+  color: $sec-teal;
+  font-weight: bold;
+}
+
+
+
+// ******************* Card trip // Homepage and Index ************************
+
+.card-trip {
+  overflow: hidden;
+  background: white;
+  padding: 24px;
+  background-color: $sec-salmon;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card-trip > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.card-trip h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  font-family: $h3-font;
+}
+
+.card-trip p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+
+.card-trip .card-trip-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+  background-color: $alm-white;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.card-trip-infos .card-trip-user {
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
+  height: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 60px;
+}
+
+
+// ******************* reviews ************************
+
+.card-review {
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  background-color: $sec-salmon;
+  border-radius: 20px;
+  border: 3px solid $pri-salmon;
+}
+
+.card-review > img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+
+.star-rating {
+  height: 15px !important;
+  width: 15px;
+}
+
+.review-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+  margin: 50px 0px;
+}
+
+.card-review h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-review p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-review .card-review-infos {
+  padding: 16px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+// ******************* Card product // Dashboard ************************
+
+
+.card-product {
+  overflow: hidden;
+  height: 310px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  border: 18px solid $sec-salmon;
+  border-radius: 30px;
+  margin-bottom: 20px;
+
+}
+
+.card-product img {
+  height: 100%;
+  width: 310px;
+  object-fit: cover;
+}
+
+
+// .card-product-infos h2 {
+//   font-size: 24px;
+//   font-weight: bold;
+//   margin: 0;
+// }
+
+.card-product p {
+  font-size: 18px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+
+.card-product .card-product-infos {
+  padding: 16px;
+  //overflow-wrap: break-word;
+}

@@ -1,0 +1,35 @@
+.navbar-ac {
+  justify-content: space-between;
+  background: white;
+}
+
+.navbar-ac .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-ac .navbar-brand img {
+  width: 150px;
+}
+
+.nav-link {
+  font-family: $h3-font;
+  text-decoration: none;
+  color: $pri-teal;
+  margin-right: 10px;
+}
+
+.search-navbar {
+  input {
+    border-radius: 10px 0px 0px 10px;
+  }
+  .btn-ghost {
+    border-radius: 0px 10px 10px 0px;
+  }
+}
+
+.nav-item img {
+  &:hover {
+    outline: 1px solid $pri-teal;
+    outline-offset: -8px;
+  }
+}
