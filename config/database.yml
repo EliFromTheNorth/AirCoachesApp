@@ -23,7 +23,7 @@ default: &default
 
 development:
   <<: *default
-  database: air-coaches-app_development
+  database: dadko1b31qe075_development
   # database: AirCoaches_development
 
   # The specified database role being used to connect to postgres.
@@ -58,7 +58,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: air-coaches-app_test
+  database: dadko1b31qe075_test
   # database: AirCoaches_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
@@ -83,9 +83,9 @@ test:
 # test
 production:
   <<: *default
-  database: air-coaches-app_production
-  username: air-coaches-app
-  password: <%= ENV["AIR-COACHES-APP_DATABASE_PASSWORD"] %>
+  database: dadko1b31qe075_production
+  username: qucfhpwddadgps
+  password: fdb92bb23266086871add064be0d803a6c72af3dbc3f16aa7f3bede0b932c545
   # database: AirCoaches_production
   # username: AirCoaches
   # password: <%= ENV["AIRCOACHES_DATABASE_PASSWORD"] %>

@@ -7,5 +7,5 @@ test:
 production:
   adapter: redis
   url: <%= ENV.fetch("REDIS_URL") { "redis://localhost:6379/1" } %>
-  channel_prefix: air-coaches-app_production
+  channel_prefix: dadko1b31qe075_production
   # channel_prefix: AirCoaches_production
