@@ -86,7 +86,7 @@
 // ******************* Card trip // Homepage and Index ************************
 
 .card-trip {
-  overflow: hidden;
+  // overflow: hidden;
   background: white;
   padding: 24px;
   background-color: $sec-salmon;
@@ -112,6 +112,7 @@
   font-size: 12px;
   opacity: .7;
   margin: 0;
+  word-wrap: break-word;
 }
 
 
