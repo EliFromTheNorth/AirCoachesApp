@@ -14,6 +14,9 @@ class CoachingOffer < ApplicationRecord
   validates :user, presence: true
   validates :skill, inclusion: { in: ["Ruby", "Rails", "JavaScript", "HTML", "CSS", "FrontEnd", "BackEnd", "Python", "PHP"] }
 
+  has_one_attached :profile_pic
+
+
   def average_rating
     reviews.average(:rating) || 0
   end
