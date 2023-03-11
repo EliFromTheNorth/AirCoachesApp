@@ -26,7 +26,7 @@
                     <p><strong>Request from: </strong><%= booking.user.first_name %> <%=booking.user.last_name%></p>
                     <p><strong>Offer Ref: </strong><%= booking.coaching_offer.title %></p>
                     <p><strong>Skill: </strong><%= booking.coaching_offer.skill %></p>
-                    <%= link_to "Contact the coach", "#{booking.coaching_offer.user.email}", class: "btn-ghost a-btn ms-2" %>
+                    <%= link_to "Contact the coach", "#{booking.user.email}", class: "btn-ghost a-btn ms-2" %>
                     <div class="flex-grow-1 text-end">
                        <% if booking.status == "accepted" %>
                         <h5 class=booking-status>🎉 Booking Confirmed</h5>
