@@ -13,7 +13,7 @@ height width???
                   <p><%= offer.description %></p>
                 </div>
                 <h2 class="card-trip-pricing"> $<%= offer.price %>/h</h2>
-                <%= cl_image_tag offer.user.profile_pic.key, height: 300, width: 400, crop: :fill, class: "card-trip-user avatar-bordered" %>
+                <!-- <%= cl_image_tag offer.user.profile_pic.key, height: 300, width: 400, crop: :fill, class: "card-trip-user avatar-bordered" %> -->
               </div>
             </div>
       <% end %>
