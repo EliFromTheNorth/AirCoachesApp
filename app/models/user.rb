@@ -10,6 +10,7 @@ class User < ApplicationRecord
 
   validates :first_name, presence: true
   validates :last_name, presence: true
+  validates :profile_pic, presence: true
 
   has_one_attached :profile_pic
 end
