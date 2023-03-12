@@ -3,7 +3,7 @@
     <%= image_tag "skills/#{offer.skill}.png", alt: "#{offer.skill} Logo" %>
     <div class="card-trip-infos">
       <div>
-        <h2><%= offer.title%></h2>
+        <h2><%= offer.title.truncate(20)%></h2>
         <p><%= offer.description.truncate(50) %></p>
       </div>
       <h2 class="card-trip-pricing"> $<%= offer.price %>/h</h2>
