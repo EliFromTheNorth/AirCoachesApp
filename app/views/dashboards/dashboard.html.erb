@@ -103,8 +103,8 @@
             <% if @your_offers.empty? %>
               <p>You haven't posted any coaching offers yet</p>
             <% else %>
-              <% @your_offers.each do | offer | %>
-                  <div class="your-offers">
+              <div class="your-offers">
+                <% @your_offers.each do | offer | %>
                     <div class="your-offer-card">
                         <div class="skill-image">
                           <%= image_tag "skills/#{offer.skill}.png", alt: "#{offer.skill} Logo" %>
@@ -134,13 +134,13 @@
                         <br>
                         <%= offer.description %>
                       </div>
-                      <div class="flex-grow-1 text-end">
+                      <div class="flex-grow-1 text-end your-offer-buttons">
                         <%= link_to "Edit", edit_coaching_offer_path(offer), class: "btn-ghost a-btn ms-2" %>
                         <%= link_to "Delete", coaching_offer_path(offer), data: { turbo_method: :delete}, class: "btn-ghost a-btn ms-2" %>
                       </div>
                     </div>
-                  </div>
-              <% end %>
+                  <% end %>
+                </div>
             <% end %>
             </div>
           </div>
