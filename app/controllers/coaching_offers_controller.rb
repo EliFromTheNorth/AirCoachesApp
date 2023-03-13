@@ -1,4 +1,7 @@
 class CoachingOffersController < ApplicationController
+
+  before_action :set_coaching_offer, only: [:show, :edit, :update, :destroy, :status]
+
   def index
     query = params[:query]
     if query.present?
@@ -29,9 +32,36 @@ class CoachingOffersController < ApplicationController
     end
   end
 
+  # ****
+  #update
+  def edit
+  end
+
+  def update
+    @coaching_offer.update(coaching_offer_params)
+    redirect_to dashboard_path(@coaching_offer)
+  end
+
+  #delete
+  def destroy
+    @coaching_offer.destroy
+    redirect_to dashboard_url, notice: "The offer was deleted."
+  end
+
+  def status
+    @coaching_offer.status = params[:status]
+    @coaching_offer.save
+    redirect_to dashboard_path
+  end
+
+
   private
 
   def coaching_offer_params
     params.require(:coaching_offer).permit(:skill, :description, :price, :title, :rating)
+  end
+
+  def set_coaching_offer
+    @coaching_offer = CoachingOffer.find(params[:id])
   end
 end

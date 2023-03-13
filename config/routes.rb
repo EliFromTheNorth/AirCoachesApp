@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   patch 'status/:id', to: 'bookings#status', as: 'status'
 
-  resources :coaching_offers, only: [:index, :show, :new, :create] do
+  resources :coaching_offers, only: [:index, :show, :new, :create, :edit, :update, :destroy] do
     resources :bookings, except: :show
   end
 

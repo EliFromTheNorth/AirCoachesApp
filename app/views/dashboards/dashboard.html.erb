@@ -134,6 +134,10 @@
                         <br>
                         <%= offer.description %>
                       </div>
+                      <div class="flex-grow-1 text-end">
+                        <%= link_to "Edit", edit_coaching_offer_path(offer), class: "btn-ghost a-btn ms-2" %>
+                        <%= link_to "Delete", coaching_offer_path(offer), data: { turbo_method: :delete}, class: "btn-ghost a-btn ms-2" %>
+                      </div>
                     </div>
                   </div>
               <% end %>
