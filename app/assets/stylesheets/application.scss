@@ -7,6 +7,21 @@
 @import "bootstrap/scss/bootstrap";
 @import "font-awesome";
 
-// Your CSS partials
+// CSS partials
 @import "components/index";
 @import "pages/index";
+
+
+html, body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  flex: 1 0 auto;
+}
+.footer {
+  flex-shrink: 0;
+}
