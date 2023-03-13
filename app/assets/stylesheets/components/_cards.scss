@@ -92,6 +92,7 @@
   background-color: $sec-salmon;
   border-radius: 20px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin-top: 25px;
 }
 
 .card-trip > img {
@@ -124,6 +125,8 @@
   position: relative;
   background-color: $alm-white;
   border-radius: 0px 0px 10px 10px;
+  word-wrap: break-word;
+
 }
 
 .card-trip-infos .card-trip-user {
@@ -134,10 +137,18 @@
   height: 40px;
 }
 
+.card-trip .card-trip-text {
+  word-wrap: break-word;
+}
+
 .grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 60px;
+  // display: grid;
+  // grid-template-columns: 1fr 1fr 1fr;
+  // grid-gap: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: space-around;
 }
 
 
