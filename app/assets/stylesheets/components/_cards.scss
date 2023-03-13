@@ -258,5 +258,8 @@
 
 .your-offer-card .offer_description {
   overflow-wrap: break-word;
+}
 
+.your-offer-card .rating_price {
+  flex-direction: column-reverse;
 }
