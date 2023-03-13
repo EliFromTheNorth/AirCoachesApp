@@ -235,5 +235,28 @@
 
 .card-product .card-product-infos {
   padding: 16px;
-  //overflow-wrap: break-word;
+}
+
+// ******************* Your offers ************************
+
+.your-offers {
+  display: flex;
+  // flex-direction: row;
+  justify-content: center;
+}
+
+.your-offer-card {
+  background-color: #ffffff;
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  border: 3px solid #ff9477;
+  margin-right: 20px;
+
+}
+
+.your-offer-card .offer_description {
+  overflow-wrap: break-word;
+
 }

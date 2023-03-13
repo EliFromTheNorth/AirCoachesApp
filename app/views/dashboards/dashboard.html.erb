@@ -5,9 +5,9 @@
     <div class="nav nav-tabs" id="nav-tab" role="tablist">
       <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">See as a Coachee</button>
       <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">See as a Coach</button>
+      <button class="nav-link" id="nav-offers-tab" data-bs-toggle="tab" data-bs-target="#nav-offers" type="button" role="tab" aria-controls="nav-offers" aria-selected="false">Your offers</button>
     </div>
   </nav>
-
 
   <div class="tab-content" id="nav-tabContent">
     <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
@@ -95,10 +95,57 @@
       <% end %>
     </div>
 
-
-
-
-
+    <div class="tab-pane fade" id="nav-offers" role="tabpanel" aria-labelledby="nav-offers-tab" tabindex="0">
+      <% if @your_offers.empty? == false %>
+        <div class="your-offers-list">
+          <h3 class="mt-5">Your coaching offers:</h3>
+          <div class="mt-5">
+            <% if @your_offers.empty? %>
+              <p>You haven't posted any coaching offers yet</p>
+            <% else %>
+              <% @your_offers.each do | offer | %>
+                  <div class="your-offers">
+                    <div class="your-offer-card">
+                        <div class="skill-image">
+                          <%= image_tag "skills/#{offer.skill}.png", alt: "#{offer.skill} Logo" %>
+                        </div>
+                        <div class="infos">
+                          <div class="skills">
+                            Skill:
+                            <%= offer.skill %>
+                          </div>
+                          <div class="rating_price">
+                            <div class="rating">
+                              <% if offer.rating %>
+                                <% offer.rating.floor.times do %>
+                                  <%= image_tag "star.png", alt: "alttext", class: "star-rating" %>
+                                <% end %>
+                              <% else %>
+                                <small>No ratings yet.</small>
+                              <% end %>
+                            </div>
+                            <div class="price-offer">
+                              Price: $<%= offer.price %>/h
+                            </div>
+                          </div>
+                        </div>
+                      <div class="offer_description">
+                        <%= offer.title %>
+                        <br>
+                        <%= offer.description %>
+                      </div>
+                    </div>
+                  </div>
+              <% end %>
+            <% end %>
+            </div>
+          </div>
+        </div>
+      <% else %>
+      <h3 class="mt-5 mb-5 text-center">You have no coaching requests!</h3>
+      <span class="d-grid gap-2 col-3 mx-auto"><%= link_to "Create a Coaching Offer", new_coaching_offer_path, class: "btn-flat a-btn ms-2 text-center" %></span>
+      <% end %>
+    </div>
 
 
 
