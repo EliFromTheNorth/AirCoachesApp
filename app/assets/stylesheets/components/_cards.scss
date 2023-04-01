@@ -93,6 +93,8 @@
   border-radius: 20px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   margin-top: 25px;
+  max-width: 400px;
+  // min-width: 320px;
 }
 
 .card-trip > img {
@@ -142,13 +144,15 @@
 }
 
 .grid {
-  // display: grid;
+  display: grid;
   // grid-template-columns: 1fr 1fr 1fr;
-  // grid-gap: 60px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-content: space-around;
+  grid-gap: 60px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+  // display: flex;
+  // flex-wrap: wrap;
+  // justify-content: space-evenly;
+  // align-content: space-around;
 }
 
 
