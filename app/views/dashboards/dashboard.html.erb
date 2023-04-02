@@ -106,6 +106,7 @@
               <div class="your-offers">
                 <% @your_offers.each do | offer | %>
                     <div class="your-offer-card">
+                      <div class="your-offer-card-head">
                         <div class="skill-image">
                           <%= image_tag "skills/#{offer.skill}.png", alt: "#{offer.skill} Logo" %>
                         </div>
@@ -129,6 +130,7 @@
                             </div>
                           </div>
                         </div>
+                      </div>
                       <div class="offer_description">
                         <%= offer.title %>
                         <br>

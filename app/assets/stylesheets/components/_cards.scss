@@ -261,13 +261,6 @@
   object-fit: cover;
 }
 
-
-// .card-product-infos h2 {
-//   font-size: 24px;
-//   font-weight: bold;
-//   margin: 0;
-// }
-
 .card-product p {
   font-size: 18px;
   line-height: 1.4;
@@ -297,13 +290,18 @@
 
 .your-offer-card {
   background-color: #ffffff;
-  width: 40vh;
+  max-width: 400px;
+  min-width: 300px;
   display: flex;
   flex-direction: column;
   border-radius: 20px;
   border: 3px solid #ff9477;
   margin: 0 25px 25px 0;
 
+}
+
+.your-offer-card-head {
+  display: flex;
 }
 
 .your-offer-card .offer_description {
